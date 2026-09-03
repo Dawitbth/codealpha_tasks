@@ -1,11 +1,11 @@
-
+# Important libraries and packages
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 from urllib.parse import urljoin
 import time
 
-
+# URL to Scrape
 base_url = 'https://books.toscrape.com/'
 
 def scrape_page(url):
@@ -30,7 +30,7 @@ def scrape_page(url):
         availability = book.find('p', class_='instock').text.strip()
         relative_url = book.h3.a['href']
         product_url = urljoin(url, relative_url)
-
+# Store the reuslts
         results.append({
                 
             "Title" : title,
@@ -92,5 +92,5 @@ df.to_csv(
     "scraped_books_dataset.csv",
     index=False
 )
-print("scraped_books_dataset csv file Successfully Saved!")
+print("scraped_books_dataset.csv Successfully Saved!")
 
