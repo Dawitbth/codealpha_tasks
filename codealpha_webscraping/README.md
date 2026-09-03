@@ -141,7 +141,7 @@ git clone YOUR_GITHUB_REPOSITORY_URL
 ### 2. Open the project folder
 
 ```bash
-cd CodeAlpha_WebScraping
+cd codealpha_webscraping
 ```
 
 ### 3. Install the required libraries
@@ -191,7 +191,7 @@ The project follows the internship requirement to extract relevant data from pub
 
 ## 👤 Author
 
-**Dawit Tamirat Higissa**
+**Dawit Tamirat**
 
 Data Analyst | Aspiring Data Scientist
 
