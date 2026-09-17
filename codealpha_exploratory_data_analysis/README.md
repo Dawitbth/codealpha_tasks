@@ -1,444 +1,301 @@
-\# CodeAlpha — Exploratory Data Analysis of Supermarket Sales
+# CodeAlpha — Exploratory Data Analysis of Supermarket Sales
 
+## 📊 Project Overview
 
+This project was completed as **Task 2: Exploratory Data Analysis (EDA)** for the **CodeAlpha Data Analytics Internship**.
 
-\## Project Overview
+The analysis explores a supermarket transaction dataset to understand **sales performance, customer behavior, product performance, payment methods, time-based patterns, relationships between variables, and potential data-quality issues**.
 
+The project applies descriptive statistics, data-quality checks, data visualization, correlation analysis, outlier detection, and hypothesis testing to generate meaningful business insights.
 
+---
 
-This project was completed as \*\*Task 2: Exploratory Data Analysis (EDA)\*\* for the CodeAlpha Data Analytics Internship.
+## 🎯 Objectives
 
+The main objectives of this project are to:
 
+* Understand the structure and data types of the dataset.
+* Ask meaningful business questions before performing analysis.
+* Identify sales trends, patterns, and anomalies.
+* Examine relationships between numerical variables.
+* Compare customer groups and business categories.
+* Detect potential data-quality issues and unusual observations.
+* Perform statistical hypothesis testing.
+* Generate meaningful insights from supermarket transactions.
 
-The analysis explores a supermarket transaction dataset to understand sales performance, customer behavior, product performance, payment methods, time-based patterns, relationships between variables, and potential data-quality issues.
+---
 
+## 📁 Dataset
 
-
-The project applies descriptive statistics, data-quality checks, visualization, correlation analysis, outlier detection, and hypothesis testing.
-
-
-
-\## Objectives
-
-
-
-The analysis aims to:
-
-
-
-\* Understand the structure and data types of the dataset.
-
-\* Ask meaningful business questions before analysis.
-
-\* Identify trends, patterns, and anomalies.
-
-\* Examine relationships between numerical variables.
-
-\* Test a statistical hypothesis.
-
-\* Detect potential data-quality issues.
-
-\* Generate meaningful insights from supermarket transactions.
-
-
-
-\## Dataset
-
-
-
-The dataset contains \*\*1,000 supermarket transactions\*\*.
-
-
+The dataset contains **1,000 supermarket transactions**.
 
 Important variables include:
 
+* Invoice / transaction information
+* Branch
+* City
+* Customer type
+* Gender
+* Product line
+* Unit price
+* Quantity
+* Tax
+* Sales
+* Cost of goods sold (COGS)
+* Gross margin percentage
+* Gross income
+* Payment method
+* Rating
+* Date
+* Time
 
+---
 
-\* Invoice/customer transaction information
+## 🛠️ Technologies Used
 
-\* Branch
+* **Python**
+* **Pandas**
+* **NumPy**
+* **Matplotlib**
+* **Seaborn**
+* **SciPy**
+* **Jupyter Notebook (ON Colab)**
 
-\* City
+---
 
-\* Customer type
+# 🔎 Analysis Performed
 
-\* Gender
+## 1. Data Structure and Quality
 
-\* Product line
+The dataset was inspected to understand its overall structure and quality.
 
-\* Unit price
+The analysis included:
 
-\* Quantity
+* Number of rows and columns
+* Data types
+* Missing values
+* Duplicate records
+* Unique categorical values
+* Potential unusual observations
 
-\* Tax
+---
 
-\* Sales
+## 2. Descriptive Statistics
 
-\* Cost of goods sold (COGS)
+Descriptive statistics were used to understand the distribution and characteristics of numerical variables.
 
-\* Gross margin percentage
+The analysis included:
 
-\* Gross income
+* Mean
+* Median
+* Standard deviation
+* Minimum
+* Maximum
+* Quartiles
 
-\* Payment method
+---
 
-\* Rating
+## 3. Product-Line Analysis
 
-\* Date
+Sales and quantity were analyzed across different product lines.
 
-\* Time
+### Key observations
 
+* **Food and Beverages** recorded the highest total sales.
+* **Health and Beauty** recorded the lowest total sales.
+* **Electronic Accessories** recorded the highest quantity sold.
 
+These results help identify differences between product categories in terms of revenue and sales volume.
 
-\## Technologies Used
+---
 
+## 4. Branch Analysis
 
+Total sales were compared across the three supermarket branches.
 
-\* Python
+### Key observation
 
-\* Pandas
+* **Giza** recorded the highest total sales.
+* **Alex** and **Cairo** recorded very similar total sales.
 
-\* NumPy
+Branch-level analysis helps provide a clearer view of sales distribution across locations.
 
-\* Matplotlib
+---
 
-\* Seaborn
+## 5. Customer Analysis
 
-\* SciPy
+Sales behavior was compared between:
 
-\* Jupyter Notebook
+* **Member customers**
+* **Normal customers**
 
+### Key observations
 
+* Member customers had more transactions in the dataset.
+* Members also had a higher average transaction value.
 
-\## Analysis Performed
+This comparison helps explore differences in purchasing behavior between customer groups.
 
+---
 
+## 6. Payment Method Analysis
 
-\### 1. Data Structure and Quality
+The frequency of different payment methods was examined.
 
+### Key observation
 
+**E-wallet** was the most frequently used payment method, followed closely by **cash**.
 
-The dataset was inspected for:
+This provides insight into customer payment preferences within the dataset.
 
+---
 
+## 7. Relationship Analysis
 
-\* Number of rows and columns
+The relationship between **Quantity** and **Sales** was investigated using correlation analysis.
 
-\* Data types
+The analysis produced a correlation coefficient of approximately:
 
-\* Missing values
+> **r = 0.706**
 
-\* Duplicate records
+This indicates a **positive relationship** between quantity purchased and total sales.
 
-\* Unique categorical values
+In general, transactions with higher quantities tended to have higher total sales values.
 
-\* Potential unusual observations
+However, correlation does not by itself establish causation.
 
+---
 
+## 8. Outlier Analysis
 
-\### 2. Descriptive Statistics
+Potential unusual transactions were investigated using:
 
+* Box plots
+* Interquartile Range (IQR) method
 
+The analysis identified potential high-value transaction outliers.
 
-Statistical measures including:
+These observations were treated as **transactions requiring further investigation rather than automatically being classified as errors**.
 
+---
 
+## 9. Time-Based Analysis
 
-\* Mean
+The transaction `Time` variable was converted into an hourly variable to examine sales patterns throughout the day.
 
-\* Median
+### Hourly Sales
 
-\* Standard deviation
+* **Peak sales hour:** 19:00
+* **Lowest sales hour:** 20:00
 
-\* Minimum
-
-\* Maximum
-
-\* Quartiles
-
-
-
-were used to understand the numerical variables.
-
-
-
-\### 3. Product Analysis
-
-
-
-Sales and quantity were analyzed across product lines.
-
-
-
-Key observations included:
-
-
-
-\* Food and beverages had the highest total sales.
-
-\* Health and beauty had the lowest total sales.
-
-\* Electronic accessories recorded the highest quantity sold.
-
-
-
-\### 4. Branch Analysis
-
-
-
-Total sales were compared across branches.
-
-
-
-Giza recorded the highest total sales, while Alex and Cairo had very similar totals.
-
-
-
-\### 5. Customer Analysis
-
-
-
-Sales behavior was compared between Member and Normal customers.
-
-
-
-Members had more transactions and a higher average transaction value in the dataset.
-
-
-
-\### 6. Payment Analysis
-
-
-
-Payment-method usage was examined.
-
-
-
-E-wallet was the most frequently used payment method, followed closely by cash.
-
-
-
-\### 7. Relationship Analysis
-
-
-
-The correlation between Quantity and Sales was examined.
-
-
-
-The analysis produced a correlation coefficient of approximately \*\*0.706\*\*, indicating a positive relationship between quantity purchased and total sales.
-
-
-
-\### 8. Outlier Analysis
-
-
-
-Box plots and the Interquartile Range (IQR) method were used to identify potential high-value transaction outliers.
-
-
-
-Potential outliers were treated as observations requiring further investigation rather than automatically being classified as errors.
-
-
-
-\### 9. Time-Based Analysis
-
-
-
-The transaction time was converted into an hourly variable to identify sales patterns throughout the day.
-
-
-
-Key observations:
-
-
-
-\* Peak sales hour: \*\*19:00\*\*
-
-\* Lowest sales hour: \*\*20:00\*\*
-
-
+### Day-of-Week Analysis
 
 Sales were also analyzed by day of the week.
 
+* **Highest-sales day:** Saturday
+* **Lowest-sales day:** Monday
 
+These patterns can help identify periods of relatively higher and lower sales activity.
 
-\* Highest-sales day: \*\*Saturday\*\*
+---
 
-\* Lowest-sales day: \*\*Monday\*\*
+## 10. Hypothesis Testing
 
+An **independent two-sample t-test** was performed to compare the average transaction values between Member and Normal customers.
 
+### Results
 
-\### 10. Hypothesis Testing
+| Metric                 |  Result |
+| ---------------------- | ------: |
+| T-statistic            |  1.8862 |
+| P-value                | 0.05957 |
+| Significance level (α) |    0.05 |
 
+### Interpretation
 
+The null hypothesis was:
 
-An independent two-sample t-test was performed to compare average transaction values between Member and Normal customers.
+> There is no statistically significant difference in average transaction values between Member and Normal customers.
 
+Because the **p-value (0.05957) is greater than 0.05**, the null hypothesis was **not rejected**.
 
+Therefore, based on this test and at the 5% significance level, there was **insufficient statistical evidence to conclude that the average transaction values differed significantly between Member and Normal customers**.
 
-Results:
+---
 
+# 📈 Key Insights
 
+The exploratory analysis revealed meaningful differences and patterns across several dimensions:
 
-\* \*\*T-statistic:\*\* 1.8862
+* **Product performance:** Food and Beverages generated the highest total sales.
+* **Sales volume:** Electronic Accessories had the highest quantity sold.
+* **Branch performance:** Giza recorded the highest total sales.
+* **Customer behavior:** Members had more transactions and a higher average transaction value in this dataset.
+* **Payment behavior:** E-wallet was the most frequently used payment method.
+* **Quantity and sales:** Quantity and Sales showed a positive correlation of approximately **0.706**.
+* **Time patterns:** 19:00 was the peak sales hour, while 20:00 had the lowest sales.
+* **Weekly patterns:** Saturday had the highest sales, while Monday had the lowest.
+* **Outliers:** Potential high-value transactions were identified for further investigation.
+* **Statistical testing:** The t-test did not provide sufficient evidence of a statistically significant difference in average transaction values between Member and Normal customers at the 5% significance level.
 
-\* \*\*P-value:\*\* 0.05957
+---
 
-\* \*\*Significance level:\*\* 0.05
-
-
-
-Since the p-value was greater than 0.05, the null hypothesis was not rejected. Therefore, there was insufficient statistical evidence at the 5% significance level to conclude that average transaction values differed significantly between the two customer groups.
-
-
-
-\## Key Insights
-
-
-
-The analysis demonstrated meaningful differences in:
-
-
-
-\* Product-line sales
-
-\* Sales volume
-
-\* Branch performance
-
-\* Customer behavior
-
-\* Payment-method usage
-
-\* Hourly sales activity
-
-\* Day-of-week sales
-
-
-
-The analysis also identified a positive relationship between quantity and sales and highlighted potential high-value transactions for further investigation.
-
-
-
-\## Project Structure
-
-
+# 📂 Project Structure
 
 ```text
-
-CodeAlpha\_ExploratoryDataAnalysis/
-
+codealpha_exploratory_data_analysis
+│
+├
+│── supermarket_sales.csv
 │
 
-├── data/
-
-│   └── supermarket\_sales.csv
-
+│── exploratory_data_analysis.ipynb
 │
-
-├── notebooks/
-
-│   └── exploratory\_data\_analysis.ipynb
-
-│
-
 ├── README.md
-
-├── requirements.txt
-
-└── .gitignore
-
+└── requirements.txt
 ```
 
+#
 
+---
 
-\## How to Run
+# 💡 Business Questions Explored
 
+The analysis was guided by practical business questions such as:
 
+1. Which product lines generate the highest sales?
+2. Which products have the highest sales volume?
+3. Which branch generates the highest total sales?
+4. How do Member and Normal customers differ in purchasing behavior?
+5. Which payment methods are most frequently used?
+6. Is there a relationship between quantity purchased and total sales?
+7. Are there unusual or high-value transactions?
+8. When do sales peak during the day?
+9. Which days of the week generate the highest sales?
+10. Is there statistically significant evidence of a difference in average transaction values between customer groups?
 
-Clone the repository:
+---
 
+# 🎓 Internship
 
+This project was completed as part of the:
 
-```bash
+**CodeAlpha Data Analytics Internship — Task 2: Exploratory Data Analysis**
 
-git clone YOUR\_GITHUB\_REPOSITORY\_URL
+---
 
-```
+# 👤 Author
 
+**Dawit Tamirat**
 
+**Data Analytics | Python | Data Science**
 
-Move into the project directory:
+---
 
+## 📌 Project Focus
 
+This project demonstrates practical skills in:
 
-```bash
+**Data Cleaning → Exploratory Data Analysis → Visualization → Statistical Analysis → Business Insights**
 
-cd CodeAlpha\_ExploratoryDataAnalysis
-
-```
-
-
-
-Install the required packages:
-
-
-
-```bash
-
-pip install -r requirements.txt
-
-```
-
-
-
-Launch Jupyter Notebook:
-
-
-
-```bash
-
-jupyter notebook
-
-```
-
-
-
-Open:
-
-
-
-```text
-
-notebooks/exploratory\_data\_analysis.ipynb
-
-```
-
-
-
-and run the notebook cells sequentially.
-
-
-
-\## Internship
-
-
-
-This project was completed as part of the \*\*CodeAlpha Data Analytics Internship — Task 2: Exploratory Data Analysis\*\*.
-
-
-
-\## Author
-
-
-
-\*\*Dawit Tamirat Higissa\*\*
-
-
-
-Data Analytics | Python | Data Science
-
-
-
+It represents an end-to-end exploratory analysis workflow using Python and real-world-style supermarket transaction data.
