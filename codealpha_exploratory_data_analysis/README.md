@@ -288,7 +288,7 @@ This project was completed as part of the:
 
 **Dawit Tamirat**
 
-**Data Analytics | Python | Data Science**
+**Data Analyst | Aspiring Data Scientist**
 
 ---
 
