@@ -69,20 +69,20 @@ CSV Dataset
 ## 📁 Project Structure
 
 ```text
-CodeAlpha_WebScraping/
+codealpha_webscraping/
 │
-├── data/
-│   └── scraped_books_dataset.csv
+├
+└── scraped_books_dataset.csv
 │
-├── notebooks/
-│   └── Task 1-CodeAlpha.ipynb
+├
+└── scraped_books.ipynb
 │
-├── src/
-│   └── scraper.py
+├
+│── scraper.py
 │
 ├── README.md
 ├── requirements.txt
-└── .gitignore
+
 ```
 
 ## 🔍 Data Extraction
@@ -130,34 +130,6 @@ The dataset was checked for:
 
 The completed dataset contains **1,000 records across 5 columns**, with all five columns containing non-null values.
 
-## 🚀 How to Run the Project
-
-### 1. Clone the repository
-
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-```
-
-### 2. Open the project folder
-
-```bash
-cd codealpha_webscraping
-```
-
-### 3. Install the required libraries
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Run the scraper
-
-```bash
-cd src
-python scraper.py
-```
-
-The scraper will collect the available book records and save the resulting dataset in the `data` folder.
 
 ## 📓 Jupyter Notebook
 
