@@ -137,13 +137,13 @@ The combination of these visual perspectives supports a more complete interpreta
 ## Project Structure
 
 ```text
-CodeAlpha_DataVisualization/
+codealpha_visualization/
 │
-├── data/
-│   └── supermarket_sales.csv
+├
+│── SuperMarket Aanlysis.csv
 │
-├── notebooks/
-│   └── supermarket_sales_visualization.ipynb
+├
+│── supermarket_sales_visualization.ipynb
 │
 ├── visualizations/
 │   ├── executive_dashboard.png
