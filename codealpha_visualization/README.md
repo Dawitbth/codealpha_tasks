@@ -28,7 +28,7 @@ The project aims to:
 * NumPy
 * Matplotlib
 * Seaborn
-* Jupyter Notebook
+* Jupyter Notebook(ON Colab)
 
 ## Dataset
 
@@ -95,13 +95,13 @@ Shows the relationship between quantity purchased and total sales, including the
 
 Compares the distribution and variation of transaction values across product categories.
 
-![Sales Distribution by Product Line](visualizations/sales_distribution_product_line.png)
+![Sales by Product Line](visualizations/sales_by_product_line.png)
 
 ### Average Transaction Value by Hour
 
 Shows how the average value of transactions changes throughout the day.
 
-![Average Transaction by Hour](visualizations/average_transaction_by_hour.png)
+![Average Transaction by Hour](visualizations/sales_by_hour.png)
 
 ### Sales and Gross Income
 
@@ -159,42 +159,11 @@ codealpha_visualization/
 │
 ├── README.md
 ├── requirements.txt
-└── .gitignore
+
 ```
 
-## How to Run
 
-Clone the repository:
 
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-```
-
-Navigate to the project:
-
-```bash
-cd CodeAlpha_DataVisualization
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Launch Jupyter:
-
-```bash
-jupyter notebook
-```
-
-Open:
-
-```text
-notebooks/supermarket_sales_visualization.ipynb
-```
-
-Run the cells sequentially.
 
 ## Internship
 
@@ -204,4 +173,4 @@ This project was completed as part of the **CodeAlpha Data Analytics Internship 
 
 **Dawit Tamirat **
 
-Data Analytics | Python | Data Science
+Data Analyst | Aspiring Data Scientist
