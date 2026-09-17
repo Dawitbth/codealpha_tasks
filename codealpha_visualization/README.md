@@ -202,6 +202,6 @@ This project was completed as part of the **CodeAlpha Data Analytics Internship 
 
 ## Author
 
-**Dawit Tamirat Higissa**
+**Dawit Tamirat **
 
 Data Analytics | Python | Data Science
